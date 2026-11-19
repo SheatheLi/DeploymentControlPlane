@@ -1,0 +1,7 @@
+{
+  "receiver_first_accepted": true,
+  "receiver_duplicate_accepted": false,
+  "stale_ack_rejected": true,
+  "receiver_unique_effects": 1,
+  "attempts": 2
+}

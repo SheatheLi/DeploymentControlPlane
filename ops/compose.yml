@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: dcp
+      POSTGRES_PASSWORD: ${DCP_DB_PASSWORD:?set DCP_DB_PASSWORD}
+      POSTGRES_DB: dcp
+    ports:
+      - "127.0.0.1:54327:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dcp -d dcp"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+volumes:
+  pgdata:

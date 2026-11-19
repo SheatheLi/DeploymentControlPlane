@@ -1,0 +1,25 @@
+{
+  "legacy": {
+    "initial": 1,
+    "final": 2,
+    "low": {
+      "ok": true
+    },
+    "high": {
+      "ok": true
+    }
+  },
+  "fixed": {
+    "initial": 1,
+    "final": 3,
+    "low": {
+      "error": "stale generation"
+    },
+    "high": {
+      "ok": true
+    }
+  },
+  "native_sqlite": true,
+  "repro_design": "legacy both SELECTs observe epoch 1; fixed low atomic statement enters after high commit",
+  "claim": "legacy generation regresses from 3 to 2; atomic UPSERT preserves 3"
+}

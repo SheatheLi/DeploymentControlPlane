@@ -1,0 +1,14 @@
+{
+  "deployments": 5,
+  "promotions": 5,
+  "max_request_to_health_ms": 696.9658819998585,
+  "latencies_ms": [
+    680.56275500021,
+    696.9658819998585,
+    493.6608600000909,
+    476.1655799993605,
+    525.3193839998858
+  ],
+  "active": "version4",
+  "backing": "SQLite WAL+real local HTTP subprocess, no Docker/K8s"
+}

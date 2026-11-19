@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>Deployment Control Plane</title>
+<style>body{font:16px system-ui;margin:2em;max-width:800px}input,button{font:inherit;padding:8px;margin:4px}pre{background:#f5f5f5;padding:18px;white-space:pre-wrap}</style>
+<h1>Deployment Control Plane</h1><label>Service <input id="service" value="demo"></label>
+<label>Version <input id="version" value="v1"></label><button id="deploy">Request deployment</button>
+<button id="reconcile">Run reconciler</button><button id="status">Refresh status</button><pre id="result"></pre>
+<script>
+const out=document.querySelector('#result');const srv=document.querySelector('#service');
+async function show(p,opt){let r=await fetch(p,opt);out.textContent=JSON.stringify(await r.json(),null,2)}
+document.querySelector('#deploy').onclick=()=>show('/deploy',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service:srv.value,version:document.querySelector('#version').value,idempotency_key:crypto.randomUUID()})});
+document.querySelector('#reconcile').onclick=()=>show('/reconcile',{method:'POST'});
+document.querySelector('#status').onclick=()=>show('/status/'+encodeURIComponent(srv.value));
+</script></html>

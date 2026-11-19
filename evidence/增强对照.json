@@ -1,0 +1,67 @@
+{
+  "runs": [
+    {
+      "scenario": "restart_adoption",
+      "run": 0,
+      "state": "ADOPTED",
+      "live": true
+    },
+    {
+      "scenario": "restart_adoption",
+      "run": 1,
+      "state": "ADOPTED",
+      "live": true
+    },
+    {
+      "scenario": "restart_adoption",
+      "run": 2,
+      "state": "ADOPTED",
+      "live": true
+    },
+    {
+      "scenario": "restart_adoption",
+      "run": 3,
+      "state": "ADOPTED",
+      "live": true
+    },
+    {
+      "scenario": "restart_adoption",
+      "run": 4,
+      "state": "ADOPTED",
+      "live": true
+    },
+    {
+      "scenario": "stale_generation",
+      "run": 0,
+      "state": "QUARANTINED",
+      "live": true
+    },
+    {
+      "scenario": "stale_generation",
+      "run": 1,
+      "state": "QUARANTINED",
+      "live": true
+    },
+    {
+      "scenario": "stale_generation",
+      "run": 2,
+      "state": "QUARANTINED",
+      "live": true
+    },
+    {
+      "scenario": "stale_generation",
+      "run": 3,
+      "state": "QUARANTINED",
+      "live": true
+    },
+    {
+      "scenario": "stale_generation",
+      "run": 4,
+      "state": "QUARANTINED",
+      "live": true
+    }
+  ],
+  "adoption_successes": 5,
+  "stale_quarantined": 5,
+  "scope": "trusted local Worker; short lease valid; simulated controller restart after child self-registration"
+}

@@ -1,0 +1,13 @@
+{
+  "legacy_unleased": {
+    "nonempty_leases": 64,
+    "failed_claims": 0,
+    "db_attempts": 64
+  },
+  "fenced_lease": {
+    "nonempty_leases": 1,
+    "failed_claims": 0,
+    "db_attempts": 1
+  },
+  "scope": "Local SQLite one-workflow fixed workload; real external receiver requires idempotency."
+}
