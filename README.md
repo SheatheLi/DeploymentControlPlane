@@ -1,5 +1,7 @@
 # DeploymentControlPlane
 
+[**在线交互展示**](https://sheatheli.github.io/DeploymentControlPlane/) · [**工程证据与验证索引**](docs/verification-map.md) · [![Smoke CI](https://github.com/SheatheLi/DeploymentControlPlane/actions/workflows/smoke.yml/badge.svg)](https://github.com/SheatheLi/DeploymentControlPlane/actions/workflows/smoke.yml)
+
 > 一个具有API、Worker、持久化状态与Web界面的发布控制面研究平台。重点不是“HTTP请求返回成功”，而是**发布意图、外部副作用和实际健康状态如何在重试、宕机与并发竞争下保持一致**。
 
 **工程状态：** 可运行的本地系统原型，含SQLite WAL、HTTP子进程对照，以及需要额外环境的PostgreSQL/Docker验证路径；不等于已部署的生产Kubernetes发布平台。
